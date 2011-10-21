@@ -1,11 +1,11 @@
-h1. Package contents
+# Package contents
 
 This is a basic firewall setup with iptables ipv4.
 
 * firewall-rules.sh - firewall - masquerade internal network, port forwarding, port opening, different chains. 
 * network-interfaces.sh - network configuration
 
-h1. Firewall rules 
+# Firewall rules 
 
 List of supported options
 
@@ -14,24 +14,24 @@ List of supported options
 * port forwarding
 * security chains
 
-h1. Network configuration
+# Network configuration
 
 One bridge interface that merged network interfaces. @network-interfaces.sh@
 
-h1. Usage
+# Usage
 
 After you change port, interfaces values and etc you can setup it like that
 
-h2. Debian
+##  Debian
 
 * Open your @/etc/network/interfaces@ and modify it like that:
 
-<pre>
+<code>
 allow-hotplug eth2
 iface eth2 inet dhcp
 pre-up /home/g/project/org/local/firewall/network-interfaces.sh
 pre-up /home/g/project/org/local/firewall/firewall-rules.sh
-</pre>
+</code>
 
 where eth2 is the external interface
 
